@@ -5,7 +5,9 @@ import Login from './pages/Login'
 function App() {
   return (
     <div>
-      <Navbar />
+      <Navbar>
+        <Login />
+      </Navbar>
 
       <Routes>
         <Route path="/login" element={<Login />} />
