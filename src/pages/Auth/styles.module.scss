@@ -1,0 +1,84 @@
+.content {
+    background: #FAFAFA;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.containerBlock {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    justify-content: center;
+    margin: 0 auto;
+    height: calc(100% - 160px);
+}
+
+.headerBlock {
+    height: 80px;
+    padding: 0 24px;
+    width: 100%;
+    border-bottom: 1px solid rgba(30, 101, 38, 0.608);
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    p {
+        color: blue;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.footerBlock {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    gap: 4px;
+    border-top: 1px solid rgba(30, 101, 38, 0.608);
+    a {
+        text-decoration: none;
+        color: gray;
+    }
+}
+
+.titleBlock {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.inputFieldBlock {
+    margin-bottom: 18px;
+}
+
+.rememberBlock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    div {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        .muiCheckBox {
+            padding: 0 0 0 1px;
+        }
+    }
+    label {
+        font-weight: 500;
+        font-size: 14px;
+        color: #026AA2;
+        line-height: 20px;
+        cursor: pointer;
+        &:hover {
+            color: #003B5B;
+        };
+    }
+}
+
+.loginButtonBlock {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
