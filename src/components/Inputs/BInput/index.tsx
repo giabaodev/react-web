@@ -20,7 +20,13 @@ const TextFieldCpn = styled(TextField)({
   },
 });
 
-export default function BInput({ name = '', label, isBoldLabel, isRequiredLabel, ...props }: ITextInputCpnProps) {
+export default function BInput({
+  name = '',
+  label,
+  isBoldLabel,
+  isRequiredLabel,
+  ...props
+}: ITextInputCpnProps): JSX.Element {
   return (
     <>
       {label && (
