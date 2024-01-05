@@ -1,6 +1,5 @@
 import { Button, ButtonProps } from '@mui/material';
 import clsx from 'clsx';
-import { memo } from 'react';
 import styles from './styles.module.scss';
 
 interface IProps extends ButtonProps {
@@ -17,7 +16,6 @@ function BButton({ bType = 'primary', size = 'large', children, ...props }: IPro
     size === 'medium' && styles.btnMedium,
     size === 'large' && styles.btnLarge,
   );
-  console.log(stylesClass)
 
   return (
     <Button className={clsx(stylesClass)} {...props}>
@@ -26,4 +24,4 @@ function BButton({ bType = 'primary', size = 'large', children, ...props }: IPro
   );
 }
 
-export default memo(BButton);
+export default BButton;
