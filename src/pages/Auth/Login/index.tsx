@@ -1,10 +1,11 @@
 import { VisibilityOffOutlined, VisibilityOutlined } from '@mui/icons-material';
-import { Button, Checkbox, InputAdornment, Typography } from '@mui/material';
+import { Checkbox, InputAdornment, Typography } from '@mui/material';
 import { ChangeEvent, useState } from 'react';
+import BButton from '../../../components/Buttons/BButton';
 import BInput from '../../../components/Inputs/BInput';
+import { CheckedIcon, UncheckIcon } from '../../../styles/icons';
 import Layout from '../Layout';
 import styles from '../styles.module.scss';
-import { CheckedIcon, UncheckIcon } from '../../../components/icons';
 
 export default function Login() {
   const [username, setUsername] = useState<string>();
@@ -67,7 +68,7 @@ export default function Login() {
         <label>Forgot password?</label>
       </div>
       <div className={styles.loginButtonBlock}>
-        <Button>Login</Button>
+        <BButton size='medium'>Login</BButton>
       </div>
       {/* <CircularProgress /> */}
     </Layout>

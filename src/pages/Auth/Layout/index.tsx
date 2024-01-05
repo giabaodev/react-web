@@ -13,7 +13,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         </div>
         <main className={styles.containerBlock}>{children}</main>
         <div className={styles.footerBlock}>
-          <MailOutlined style={{ width: '20px', height: '20px' }} />
+          <MailOutlined style={{ width: '15px', height: '15px' }} />
           <Link href="mailto:ngbaodev@gmail.com">ngbaodev@gmail.com</Link>
         </div>
       </div>
