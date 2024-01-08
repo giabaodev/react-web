@@ -1,8 +1,11 @@
 import { lazy } from 'react';
-import { publicPaths } from '../constants/routePath';
-import { HomeOutlined } from '@mui/icons-material';
+import { privatePaths, publicPaths } from '../constants/routePath';
 
 export const publicRoutes = [
+  {
+    path: publicPaths.welcome,
+    element: lazy(() => import('../pages/Welcome')),
+  },
   {
     path: publicPaths.login,
     element: lazy(() => import('../pages/Auth/Login')),
@@ -11,8 +14,8 @@ export const publicRoutes = [
 
 export const privateRoutes = [
   {
-    path: publicPaths.login,
-    element: lazy(() => import('../pages/Auth/Login')),
-    icon: <HomeOutlined />,
+    path: privatePaths.statistic,
+    element: lazy(() => import('../pages/Home')),
+    icon: undefined,
   },
 ];

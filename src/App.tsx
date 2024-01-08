@@ -7,12 +7,11 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        {/* <Route path="/login" element={<Login />} /> */}
         {publicRoutes.map((puRoute, index) => (
           <Route key={index} path={puRoute.path} element={<puRoute.element />} />
         ))}
         <Route element={<ProtectedRoute />}>
-          <Route path="admin" element={<Main />}>
+          <Route path="/admin" element={<Main />}>
             {privateRoutes.map((prRoute, index) => {
               return <Route key={index} path={prRoute.path} element={<prRoute.element />} />;
             })}
