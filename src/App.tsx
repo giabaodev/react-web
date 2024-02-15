@@ -10,13 +10,13 @@ function App() {
         {publicRoutes.map((puRoute, index) => (
           <Route key={index} path={puRoute.path} element={<puRoute.element />} />
         ))}
-        <Route element={<ProtectedRoute />}>
+        <ProtectedRoute>
           <Route path="/admin" element={<Main />}>
             {privateRoutes.map((prRoute, index) => {
               return <Route key={index} path={prRoute.path} element={<prRoute.element />} />;
             })}
           </Route>
-        </Route>
+        </ProtectedRoute>
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
     </div>
