@@ -2,21 +2,33 @@ import { Route, Routes } from 'react-router-dom';
 import ProtectedRoute from './auth/ProtectedRoute';
 import Main from './pages/Layouts/Main';
 import { privateRoutes, publicRoutes } from './routes';
+import NavigateRoute from './auth/NavigateRoute';
 
 function App() {
   return (
     <div className="App">
       <Routes>
+        <Route path='/' element={<NavigateRoute />} />
         {publicRoutes.map((puRoute, index) => (
-          <Route key={index} path={puRoute.path} element={<puRoute.element />} />
+          <Route
+            key={index}
+            path={puRoute.path}
+            element={<puRoute.element />}
+          />
         ))}
-        <ProtectedRoute>
-          <Route path="/admin" element={<Main />}>
+        <Route element={<ProtectedRoute />}>
+          <Route path="admin" element={<Main />}>
             {privateRoutes.map((prRoute, index) => {
-              return <Route key={index} path={prRoute.path} element={<prRoute.element />} />;
+              return (
+                <Route
+                  key={index}
+                  path={prRoute.path}
+                  element={<prRoute.element />}
+                />
+              );
             })}
           </Route>
-        </ProtectedRoute>
+        </Route>
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
     </div>

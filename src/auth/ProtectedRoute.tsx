@@ -1,10 +1,9 @@
-import { getCookie } from "@/helpers/cookies";
-import { Navigate, Outlet, useLocation } from "react-router-dom";
+import { getCookie } from '@/helpers/cookies';
+import { Navigate, Outlet } from 'react-router-dom';
 
-export default function ProtectedRoute({}) {
-  const location = useLocation();
-  if (location.pathname === '/admin') {
-    return <Navigate to={'/'} replace />;
+export default function ProtectedRoute(): JSX.Element {
+  if (getCookie('access_token')) {    
+    return <Outlet />;
   }
-  return <Outlet />;
+  return <Navigate to={'/login'} replace />;
 }
