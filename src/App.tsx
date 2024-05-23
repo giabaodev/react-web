@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path='/' element={<NavigateRoute />} />
+        <Route path="/" element={<NavigateRoute />} />
         {publicRoutes.map((puRoute, index) => (
           <Route
             key={index}
